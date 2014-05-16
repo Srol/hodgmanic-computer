@@ -1,4 +1,4 @@
-#import printer
+import printer
 import textwrap
 import linecache
 
