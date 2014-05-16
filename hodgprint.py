@@ -12,7 +12,7 @@ if hobonumber == "ALL":
 	hoboinfo = open("hobocleaned.txt", "r")
 	p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
 	yn = raw_input("Are you sure you want to print all 700 hobo names y/n? > ")
-	if yn.upper() = "Y":
+	if yn.upper() == "Y":
 		print hoboinfo.read()
 		p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
 		wrapped_text = textwrap.fill(hoboinfo, 32)
@@ -21,8 +21,6 @@ if hobonumber == "ALL":
 		p.linefeed() 
 		p.linefeed()
 		hoboinfo.close()
-	else:
-		break
 elif int(hobonumber) < 701 :
 	hoboinfo = linecache.getline("hobocleaned.txt", int(hobonumber))
 	print hoboinfo
