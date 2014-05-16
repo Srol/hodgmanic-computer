@@ -13,7 +13,7 @@ p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
 if hobonumber == "ALL":
 	hoboinfo = open("hobocleaned.txt", "r")
 	lines = hoboinfo.read().splitlines()
-	yn = raw_input("Are you sure you want a hard copy of all 700 hobo names y/n? > ")
+	yn = raw_input("WARNING: This process will take 23.33 repeating minutes and use an irresponsible amount of paper. \n Are you sure you want a hard copy of all 700 hobo names y/n? > ")
 	if yn.upper() == "Y":
 		for line in lines:		
 			print line
