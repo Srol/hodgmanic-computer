@@ -1,6 +1,7 @@
 import printer
 #import textwrap
 import linecache
+import time
 
 hobonumber = raw_input("Please enter hobo # > ")
 hobonumber = hobonumber.upper()
@@ -18,9 +19,10 @@ if hobonumber == "ALL":
 			print line
 #			wrapped_text = textwrap.fill(line, 32)
 			p.print_text(line.rstrip("\n"))
-			p.linefeed() 
-			p.linefeed() 
-			p.linefeed()
+			time.sleep(2)
+		p.linefeed() 
+		p.linefeed() 
+		p.linefeed()
 	else:
 		print "OPERATION TERMINATED AT USER REQUEST THAT IS ALL"
 elif int(hobonumber) < 701 :
